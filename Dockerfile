@@ -26,7 +26,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 # Если ты качаешь файлы при старте — раскомментируй:
-# RUN python download_files.py
+RUN python download_files.py
 
 # Команда запуска
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
